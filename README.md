@@ -111,41 +111,6 @@ processed_benchmark_data/
 - `processed_benchmark_data/`: Final extracted data organized by video and segment
 - `video_benchmark_data/`: Raw downloaded videos and generated SRT files
 
-## Troubleshooting
-
-### Common Issues
-
-1. **OpenAI API Key Error**
-   ```bash
-   # Ensure openai_key.txt exists and contains a valid API key
-   cat openai_key.txt
-   ```
-
-2. **YouTube Download Failures**
-   - Some videos may be private or region-restricted
-   - Check internet connection and YouTube availability
-
-3. **FFmpeg Errors**
-   - FFmpeg is installed via pip (`ffmpeg-python` package)
-   - If running locally, you may need to install system FFmpeg:
-   ```bash
-   # Ubuntu/Debian
-   sudo apt-get install ffmpeg
-   
-   # macOS
-   brew install ffmpeg
-   ```
-
-4. **Memory Issues with Large Videos**
-   - Reduce video resolution in `video_collect.py`
-   - Increase chunk size in `stt.py` for faster processing
-
-### Debugging
-Enable verbose logging by setting environment variables:
-```bash
-export PYTHONUNBUFFERED=1
-export OPENAI_LOG=debug
-```
 
 ## Dependencies
 
